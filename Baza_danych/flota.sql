@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Czas generowania: 02 Gru 2021, 15:25
--- Wersja serwera: 10.4.22-MariaDB
--- Wersja PHP: 7.3.33
+-- Host: 127.0.0.1
+-- Czas generowania: 07 Sty 2022, 19:09
+-- Wersja serwera: 10.4.19-MariaDB
+-- Wersja PHP: 7.3.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -43,9 +43,16 @@ CREATE TABLE `eksploatacja` (
 
 CREATE TABLE `element_wyposazenia` (
   `id_wyposazenia` int(11) NOT NULL,
-  `nazwa_wypozazenia` varchar(255) NOT NULL,
-  `czy_wystepuje` tinyint(1) DEFAULT NULL
+  `nazwa_wypozazenia` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `element_wyposazenia`
+--
+
+INSERT INTO `element_wyposazenia` (`id_wyposazenia`, `nazwa_wypozazenia`) VALUES
+(1, 'Standartowe'),
+(2, 'Niestandartowe');
 
 -- --------------------------------------------------------
 
@@ -55,24 +62,16 @@ CREATE TABLE `element_wyposazenia` (
 
 CREATE TABLE `marka` (
   `id_marki` int(11) NOT NULL,
-  `nazwa_marki` varchar(255) DEFAULT NULL,
-  `id_modelu` int(11) DEFAULT NULL
+  `nazwa_marki` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
 --
--- Struktura tabeli dla tabeli `miejsce_zamieszkania`
+-- Zrzut danych tabeli `marka`
 --
 
-CREATE TABLE `miejsce_zamieszkania` (
-  `id_miejsca_zamieszkania` int(11) NOT NULL,
-  `miejscowosc` varchar(255) DEFAULT NULL,
-  `ulica` varchar(255) DEFAULT NULL,
-  `nr_domu` varchar(255) DEFAULT NULL,
-  `nr_lokalu` varchar(255) DEFAULT NULL,
-  `kod_pocztowy` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `marka` (`id_marki`, `nazwa_marki`) VALUES
+(1, 'Audi'),
+(2, 'BMW');
 
 -- --------------------------------------------------------
 
@@ -82,8 +81,19 @@ CREATE TABLE `miejsce_zamieszkania` (
 
 CREATE TABLE `model` (
   `id_modelu` int(11) NOT NULL,
-  `nazwa_modelu` varchar(255) DEFAULT NULL
+  `nazwa_modelu` varchar(255) DEFAULT NULL,
+  `id_marki` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `model`
+--
+
+INSERT INTO `model` (`id_modelu`, `nazwa_modelu`, `id_marki`) VALUES
+(5, 'A4', 1),
+(6, 'Q5', 1),
+(7, 'i3', 2),
+(8, 'i8', 2);
 
 -- --------------------------------------------------------
 
@@ -94,8 +104,15 @@ CREATE TABLE `model` (
 CREATE TABLE `opiekun` (
   `id_opiekuna` int(11) NOT NULL,
   `id_pracownika` int(11) NOT NULL,
-  `czy_aktualny` tinyint(1) DEFAULT NULL
+  `id_pojazdu` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `opiekun`
+--
+
+INSERT INTO `opiekun` (`id_opiekuna`, `id_pracownika`, `id_pojazdu`) VALUES
+(3, 2, 16);
 
 -- --------------------------------------------------------
 
@@ -107,22 +124,22 @@ CREATE TABLE `pojazd` (
   `id_pojazdu` int(11) NOT NULL,
   `nr_rejestracyjny` varchar(255) NOT NULL,
   `vin` varchar(255) DEFAULT NULL,
-  `id_marki` int(11) DEFAULT NULL,
+  `id_modelu` int(11) DEFAULT NULL,
   `id_typu_pojazdu` int(11) DEFAULT NULL,
   `rok_produkcji` int(11) DEFAULT NULL,
   `przebieg` int(11) DEFAULT NULL,
   `id_przeznaczenia` int(11) DEFAULT NULL,
-  `id_wyposazenia` int(11) DEFAULT NULL,
-  `id_opiekuna` int(11) DEFAULT NULL
+  `id_wyposazenia` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Zrzut danych tabeli `pojazd`
 --
 
-INSERT INTO `pojazd` (`id_pojazdu`, `nr_rejestracyjny`, `vin`, `id_marki`, `id_typu_pojazdu`, `rok_produkcji`, `przebieg`, `id_przeznaczenia`, `id_wyposazenia`, `id_opiekuna`) VALUES
-(1, 'TEST1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(2, 'TEST2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `pojazd` (`id_pojazdu`, `nr_rejestracyjny`, `vin`, `id_modelu`, `id_typu_pojazdu`, `rok_produkcji`, `przebieg`, `id_przeznaczenia`, `id_wyposazenia`) VALUES
+(1, 'TEST1', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(2, 'TEST2', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(16, 'test321', '123', 7, 1, 2013, 123, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -137,17 +154,19 @@ CREATE TABLE `pracownik` (
   `nr_tel` int(11) NOT NULL,
   `pesel` int(11) NOT NULL,
   `id_stanowiska` int(11) DEFAULT NULL,
-  `id_miejsca_zamieszkania` int(11) DEFAULT NULL,
+  `adres` varchar(255) DEFAULT NULL,
   `login` varchar(255) DEFAULT NULL,
-  `haslo` varchar(255) DEFAULT NULL
+  `haslo` varchar(255) NOT NULL,
+  `miejscowosc` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Zrzut danych tabeli `pracownik`
 --
 
-INSERT INTO `pracownik` (`id_pracownika`, `imie`, `nazwisko`, `nr_tel`, `pesel`, `id_stanowiska`, `id_miejsca_zamieszkania`, `login`, `haslo`) VALUES
-(1, 'superadmin', 'superadmin', 123456789, 1234567890, NULL, NULL, 'superadmin', '123');
+INSERT INTO `pracownik` (`id_pracownika`, `imie`, `nazwisko`, `nr_tel`, `pesel`, `id_stanowiska`, `adres`, `login`, `haslo`, `miejscowosc`) VALUES
+(1, 'superadmin', 'superadmin', 123456789, 1234567890, 1, 'super 1', 'superadmin', '123', 'Superancka'),
+(2, 'Test123', 'Testowy321', 123123123, 2147483647, 1, 'testa 12', 'test', '123', 'Testowo');
 
 -- --------------------------------------------------------
 
@@ -159,6 +178,13 @@ CREATE TABLE `przeznaczenie` (
   `id_przeznaczenia` int(11) NOT NULL,
   `nazwa_przeznaczenia` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `przeznaczenie`
+--
+
+INSERT INTO `przeznaczenie` (`id_przeznaczenia`, `nazwa_przeznaczenia`) VALUES
+(1, 'Samochód służbowy');
 
 -- --------------------------------------------------------
 
@@ -185,6 +211,16 @@ CREATE TABLE `stanowisko` (
   `nazwa` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Zrzut danych tabeli `stanowisko`
+--
+
+INSERT INTO `stanowisko` (`id_stanowiska`, `nazwa`) VALUES
+(1, 'Super Admin'),
+(2, 'Flotmistrz'),
+(3, 'Pracownik'),
+(4, 'Opiekun pojazdu');
+
 -- --------------------------------------------------------
 
 --
@@ -195,6 +231,13 @@ CREATE TABLE `typ_pojazdu` (
   `id_typu_pojazdu` int(11) NOT NULL,
   `nazwa_typu` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `typ_pojazdu`
+--
+
+INSERT INTO `typ_pojazdu` (`id_typu_pojazdu`, `nazwa_typu`) VALUES
+(1, 'Osobowy');
 
 -- --------------------------------------------------------
 
@@ -224,6 +267,17 @@ CREATE TABLE `wypozyczenia` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Zrzut danych tabeli `wypozyczenia`
+--
+
+INSERT INTO `wypozyczenia` (`id_wypozyczenia`, `id_pojazdu`, `id_pracownika`, `data_od`, `data_do`, `powod`) VALUES
+(1, 1, 2, '2022-01-06', '2022-01-12', 'test'),
+(2, 1, 1, '2022-01-02', '2022-01-03', 'test'),
+(3, 2, 2, '2022-01-06', '2022-01-07', 'TEST2'),
+(4, 2, 2, '2021-12-28', '2022-01-01', 'test testu'),
+(5, 2, 2, '2021-12-14', '2021-12-16', 'dasdsa');
+
+--
 -- Indeksy dla zrzutów tabel
 --
 
@@ -245,46 +299,41 @@ ALTER TABLE `element_wyposazenia`
 -- Indeksy dla tabeli `marka`
 --
 ALTER TABLE `marka`
-  ADD PRIMARY KEY (`id_marki`),
-  ADD KEY `id_modelu` (`id_modelu`);
-
---
--- Indeksy dla tabeli `miejsce_zamieszkania`
---
-ALTER TABLE `miejsce_zamieszkania`
-  ADD PRIMARY KEY (`id_miejsca_zamieszkania`);
+  ADD PRIMARY KEY (`id_marki`);
 
 --
 -- Indeksy dla tabeli `model`
 --
 ALTER TABLE `model`
-  ADD PRIMARY KEY (`id_modelu`);
+  ADD PRIMARY KEY (`id_modelu`),
+  ADD KEY `id_marki` (`id_marki`);
 
 --
 -- Indeksy dla tabeli `opiekun`
 --
 ALTER TABLE `opiekun`
   ADD PRIMARY KEY (`id_opiekuna`),
-  ADD KEY `id_pracownika` (`id_pracownika`);
+  ADD KEY `id_pracownika` (`id_pracownika`),
+  ADD KEY `id_pojazdu` (`id_pojazdu`);
 
 --
 -- Indeksy dla tabeli `pojazd`
 --
 ALTER TABLE `pojazd`
   ADD PRIMARY KEY (`id_pojazdu`),
-  ADD KEY `id_marki` (`id_marki`),
+  ADD KEY `id_marki` (`id_modelu`),
   ADD KEY `id_typu_pojazdu` (`id_typu_pojazdu`),
   ADD KEY `id_przeznaczenia` (`id_przeznaczenia`),
-  ADD KEY `id_wyposazenia` (`id_wyposazenia`),
-  ADD KEY `id_opiekuna` (`id_opiekuna`);
+  ADD KEY `id_wyposazenia` (`id_wyposazenia`);
 
 --
 -- Indeksy dla tabeli `pracownik`
 --
 ALTER TABLE `pracownik`
   ADD PRIMARY KEY (`id_pracownika`),
+  ADD UNIQUE KEY `login` (`login`),
   ADD KEY `id_stanowiska` (`id_stanowiska`),
-  ADD KEY `id_miejsca_zamieszkania` (`id_miejsca_zamieszkania`);
+  ADD KEY `id_miejsca_zamieszkania` (`adres`);
 
 --
 -- Indeksy dla tabeli `przeznaczenie`
@@ -340,49 +389,43 @@ ALTER TABLE `eksploatacja`
 -- AUTO_INCREMENT dla tabeli `element_wyposazenia`
 --
 ALTER TABLE `element_wyposazenia`
-  MODIFY `id_wyposazenia` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_wyposazenia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT dla tabeli `marka`
 --
 ALTER TABLE `marka`
-  MODIFY `id_marki` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT dla tabeli `miejsce_zamieszkania`
---
-ALTER TABLE `miejsce_zamieszkania`
-  MODIFY `id_miejsca_zamieszkania` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_marki` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT dla tabeli `model`
 --
 ALTER TABLE `model`
-  MODIFY `id_modelu` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_modelu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT dla tabeli `opiekun`
 --
 ALTER TABLE `opiekun`
-  MODIFY `id_opiekuna` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_opiekuna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT dla tabeli `pojazd`
 --
 ALTER TABLE `pojazd`
-  MODIFY `id_pojazdu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pojazdu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT dla tabeli `pracownik`
 --
 ALTER TABLE `pracownik`
-  MODIFY `id_pracownika` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_pracownika` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT dla tabeli `przeznaczenie`
 --
 ALTER TABLE `przeznaczenie`
-  MODIFY `id_przeznaczenia` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_przeznaczenia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT dla tabeli `serwis`
@@ -394,13 +437,13 @@ ALTER TABLE `serwis`
 -- AUTO_INCREMENT dla tabeli `stanowisko`
 --
 ALTER TABLE `stanowisko`
-  MODIFY `id_stanowiska` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_stanowiska` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT dla tabeli `typ_pojazdu`
 --
 ALTER TABLE `typ_pojazdu`
-  MODIFY `id_typu_pojazdu` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_typu_pojazdu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT dla tabeli `usluga`
@@ -412,7 +455,7 @@ ALTER TABLE `usluga`
 -- AUTO_INCREMENT dla tabeli `wypozyczenia`
 --
 ALTER TABLE `wypozyczenia`
-  MODIFY `id_wypozyczenia` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_wypozyczenia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Ograniczenia dla zrzutów tabel
@@ -426,32 +469,31 @@ ALTER TABLE `eksploatacja`
   ADD CONSTRAINT `eksploatacja_ibfk_2` FOREIGN KEY (`id_pracownika`) REFERENCES `pracownik` (`id_pracownika`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ograniczenia dla tabeli `marka`
+-- Ograniczenia dla tabeli `model`
 --
-ALTER TABLE `marka`
-  ADD CONSTRAINT `marka_ibfk_1` FOREIGN KEY (`id_modelu`) REFERENCES `model` (`id_modelu`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `model`
+  ADD CONSTRAINT `model_ibfk_1` FOREIGN KEY (`id_marki`) REFERENCES `marka` (`id_marki`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ograniczenia dla tabeli `opiekun`
 --
 ALTER TABLE `opiekun`
-  ADD CONSTRAINT `opiekun_ibfk_1` FOREIGN KEY (`id_pracownika`) REFERENCES `pracownik` (`id_pracownika`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `opiekun_ibfk_1` FOREIGN KEY (`id_pracownika`) REFERENCES `pracownik` (`id_pracownika`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `opiekun_ibfk_2` FOREIGN KEY (`id_pojazdu`) REFERENCES `pojazd` (`id_pojazdu`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ograniczenia dla tabeli `pojazd`
 --
 ALTER TABLE `pojazd`
-  ADD CONSTRAINT `pojazd_ibfk_1` FOREIGN KEY (`id_marki`) REFERENCES `marka` (`id_marki`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `pojazd_ibfk_2` FOREIGN KEY (`id_wyposazenia`) REFERENCES `element_wyposazenia` (`id_wyposazenia`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `pojazd_ibfk_3` FOREIGN KEY (`id_opiekuna`) REFERENCES `opiekun` (`id_opiekuna`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `pojazd_ibfk_4` FOREIGN KEY (`id_typu_pojazdu`) REFERENCES `typ_pojazdu` (`id_typu_pojazdu`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `pojazd_ibfk_5` FOREIGN KEY (`id_przeznaczenia`) REFERENCES `przeznaczenie` (`id_przeznaczenia`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `pojazd_ibfk_5` FOREIGN KEY (`id_przeznaczenia`) REFERENCES `przeznaczenie` (`id_przeznaczenia`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `pojazd_ibfk_6` FOREIGN KEY (`id_modelu`) REFERENCES `model` (`id_modelu`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ograniczenia dla tabeli `pracownik`
 --
 ALTER TABLE `pracownik`
-  ADD CONSTRAINT `pracownik_ibfk_1` FOREIGN KEY (`id_miejsca_zamieszkania`) REFERENCES `miejsce_zamieszkania` (`id_miejsca_zamieszkania`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `pracownik_ibfk_2` FOREIGN KEY (`id_stanowiska`) REFERENCES `stanowisko` (`id_stanowiska`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
