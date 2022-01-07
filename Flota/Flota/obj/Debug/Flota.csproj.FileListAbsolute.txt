@@ -1,0 +1,142 @@
+C:\Users\Piotrek\source\repos\Flota\Flota\obj\Debug\Flota.csproj.AssemblyReference.cache
+C:\Users\Piotrek\source\repos\Flota\Flota\obj\Debug\Flota.exe.config
+C:\Users\Piotrek\source\repos\Flota\Flota\obj\Debug\Flota.LoginPanel.resources
+C:\Users\Piotrek\source\repos\Flota\Flota\obj\Debug\Flota.Menu.resources
+C:\Users\Piotrek\source\repos\Flota\Flota\obj\Debug\Flota.Properties.Resources.resources
+C:\Users\Piotrek\source\repos\Flota\Flota\obj\Debug\Flota.csproj.GenerateResource.cache
+C:\Users\Piotrek\source\repos\Flota\Flota\obj\Debug\Flota.csproj.CoreCompileInputs.cache
+C:\Users\Piotrek\source\repos\Flota\Flota\bin\Debug\Flota.exe.config
+C:\Users\Piotrek\source\repos\Flota\Flota\bin\Debug\Flota.exe
+C:\Users\Piotrek\source\repos\Flota\Flota\bin\Debug\Flota.pdb
+C:\Users\Piotrek\source\repos\Flota\Flota\bin\Debug\MySql.Data.dll
+C:\Users\Piotrek\source\repos\Flota\Flota\bin\Debug\Google.Protobuf.dll
+C:\Users\Piotrek\source\repos\Flota\Flota\bin\Debug\ZstdNet.dll
+C:\Users\Piotrek\source\repos\Flota\Flota\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Piotrek\source\repos\Flota\Flota\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Piotrek\source\repos\Flota\Flota\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Piotrek\source\repos\Flota\Flota\bin\Debug\System.Memory.dll
+C:\Users\Piotrek\source\repos\Flota\Flota\bin\Debug\System.Buffers.dll
+C:\Users\Piotrek\source\repos\Flota\Flota\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Piotrek\source\repos\Flota\Flota\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Piotrek\source\repos\Flota\Flota\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Piotrek\source\repos\Flota\Flota\bin\Debug\MySql.Data.xml
+C:\Users\Piotrek\source\repos\Flota\Flota\obj\Debug\Flota.exe
+C:\Users\Piotrek\source\repos\Flota\Flota\obj\Debug\Flota.pdb
+C:\Users\Piotrek\source\repos\Flota\Flota\obj\Debug\Flota.Zarządzaj_pojazdem.resources
+C:\Users\Piotrek\source\repos\Flota\Flota\obj\Debug\Flota.Wybor_Pojazdu.resources
+C:\Users\Piotrek\source\repos\Flota\Flota\obj\Debug\Flota.formularzPojazdu.resources
+C:\Users\Piotrek\source\repos\Flota\Flota\obj\Debug\Flota.zarzadzajBazaDanych.resources
+C:\Users\Piotrek\source\repos\Flota\Flota\obj\Debug\Flota.zarzadajUzytkownikiem.resources
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\bin\Debug\Flota.exe.config
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\bin\Debug\Flota.exe
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\bin\Debug\Flota.pdb
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\bin\Debug\Google.Protobuf.dll
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\bin\Debug\ZstdNet.dll
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\bin\Debug\System.Memory.dll
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\bin\Debug\System.Buffers.dll
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\bin\Debug\MySql.Data.xml
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.csproj.AssemblyReference.cache
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.exe.config
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.formularzPojazdu.resources
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.LoginPanel.resources
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.Menu.resources
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.Properties.Resources.resources
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.Wybor_Pojazdu.resources
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.zarzadajUzytkownikiem.resources
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.zarzadzajBazaDanych.resources
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.Zarządzaj_pojazdem.resources
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.csproj.GenerateResource.cache
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.csproj.CoreCompileInputs.cache
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.exe
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.pdb
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.EdycjaPojazdu.resources
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.WyborUzytkownika.resources
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.DodajUzytkownika.resources
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.EdycjaUzytkownika.resources
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.Serwis.resources
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.Ustawienia.resources
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.Eksploatacja.resources
+C:\Users\camo\Desktop\2021_BD2_s07_Grzesik-main\Flota\Flota\obj\Debug\Flota.Wypozyczenie.resources
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.csproj.AssemblyReference.cache
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.exe.config
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.DodajUzytkownika.resources
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.EdycjaPojazdu.resources
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.EdycjaUzytkownika.resources
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.Eksploatacja.resources
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.Serwis.resources
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.Ustawienia.resources
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.WyborUzytkownika.resources
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.formularzPojazdu.resources
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.LoginPanel.resources
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.Menu.resources
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.Properties.Resources.resources
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.Wybor_Pojazdu.resources
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.Wypozyczenia.resources
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.zarzadajUzytkownikiem.resources
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.zarzadzajBazaDanych.resources
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.Zarządzaj_pojazdem.resources
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.csproj.GenerateResource.cache
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.csproj.CoreCompileInputs.cache
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.exe
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.pdb
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\Flota.exe.config
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\Flota.exe
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\Flota.pdb
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\MySql.Data.dll
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\Google.Protobuf.dll
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\ZstdNet.dll
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\System.Memory.dll
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\System.Buffers.dll
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Piotrek\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\MySql.Data.xml
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\Flota.exe.config
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\Flota.exe
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\Flota.pdb
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\Google.Protobuf.dll
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\ZstdNet.dll
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\System.Memory.dll
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\System.Buffers.dll
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\bin\Debug\MySql.Data.xml
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.csproj.AssemblyReference.cache
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.exe.config
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.DodajUzytkownika.resources
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.EdycjaPojazdu.resources
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.EdycjaUzytkownika.resources
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.Eksploatacja.resources
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.Serwis.resources
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.Ustawienia.resources
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.WyborUzytkownika.resources
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.formularzPojazdu.resources
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.LoginPanel.resources
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.Menu.resources
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.Properties.Resources.resources
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.Wybor_Pojazdu.resources
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.Wypozyczenia.resources
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.zarzadajUzytkownikiem.resources
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.zarzadzajBazaDanych.resources
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.Zarządzaj_pojazdem.resources
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.csproj.GenerateResource.cache
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.csproj.CoreCompileInputs.cache
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.csproj.CopyComplete
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.exe
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.pdb
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.listaWypozyczen.resources
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.historiaEksploatacja.resources
+C:\Users\kgrze\Desktop\dupcia\Flota (1)\Flota\Flota\obj\Debug\Flota.historiaSerwis.resources

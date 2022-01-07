@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{786136D6-7068-454D-BCBA-F0F32CEB3EEF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Flota</RootNamespace>
+    <AssemblyName>Flota</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publikuj\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bazaDanych.cs" />
+    <Compile Include="DodajUzytkownika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajUzytkownika.Designer.cs">
+      <DependentUpon>DodajUzytkownika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EdycjaPojazdu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdycjaPojazdu.Designer.cs">
+      <DependentUpon>EdycjaPojazdu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EdycjaUzytkownika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdycjaUzytkownika.Designer.cs">
+      <DependentUpon>EdycjaUzytkownika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eksploatacja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eksploatacja.Designer.cs">
+      <DependentUpon>Eksploatacja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="historiaEksploatacja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="historiaEksploatacja.Designer.cs">
+      <DependentUpon>historiaEksploatacja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="historiaSerwis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="historiaSerwis.Designer.cs">
+      <DependentUpon>historiaSerwis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listaWypozyczen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listaWypozyczen.Designer.cs">
+      <DependentUpon>listaWypozyczen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Serwis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Serwis.Designer.cs">
+      <DependentUpon>Serwis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ustawienia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ustawienia.Designer.cs">
+      <DependentUpon>Ustawienia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WyborUzytkownika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WyborUzytkownika.Designer.cs">
+      <DependentUpon>WyborUzytkownika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formularzPojazdu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularzPojazdu.Designer.cs">
+      <DependentUpon>formularzPojazdu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listaPojazdow.cs" />
+    <Compile Include="listaUzytkownikow.cs" />
+    <Compile Include="LoginPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPanel.Designer.cs">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sprawdzenieLogowania.cs" />
+    <Compile Include="Wybor_Pojazdu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wybor_Pojazdu.Designer.cs">
+      <DependentUpon>Wybor_Pojazdu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wypozyczenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wypozyczenia.Designer.cs">
+      <DependentUpon>Wypozyczenia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zarzadajUzytkownikiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zarzadajUzytkownikiem.Designer.cs">
+      <DependentUpon>zarzadajUzytkownikiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zarzadzajBazaDanych.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zarzadzajBazaDanych.Designer.cs">
+      <DependentUpon>zarzadzajBazaDanych.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zarządzaj_pojazdem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zarządzaj_pojazdem.Designer.cs">
+      <DependentUpon>Zarządzaj_pojazdem.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DodajUzytkownika.resx">
+      <DependentUpon>DodajUzytkownika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EdycjaPojazdu.resx">
+      <DependentUpon>EdycjaPojazdu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EdycjaUzytkownika.resx">
+      <DependentUpon>EdycjaUzytkownika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eksploatacja.resx">
+      <DependentUpon>Eksploatacja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="historiaEksploatacja.resx">
+      <DependentUpon>historiaEksploatacja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="historiaSerwis.resx">
+      <DependentUpon>historiaSerwis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listaWypozyczen.resx">
+      <DependentUpon>listaWypozyczen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Serwis.resx">
+      <DependentUpon>Serwis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ustawienia.resx">
+      <DependentUpon>Ustawienia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WyborUzytkownika.resx">
+      <DependentUpon>WyborUzytkownika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularzPojazdu.resx">
+      <DependentUpon>formularzPojazdu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPanel.resx">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Wybor_Pojazdu.resx">
+      <DependentUpon>Wybor_Pojazdu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wypozyczenia.resx">
+      <DependentUpon>Wypozyczenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zarzadajUzytkownikiem.resx">
+      <DependentUpon>zarzadajUzytkownikiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zarzadzajBazaDanych.resx">
+      <DependentUpon>zarzadzajBazaDanych.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zarządzaj_pojazdem.resx">
+      <DependentUpon>Zarządzaj_pojazdem.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 i x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
