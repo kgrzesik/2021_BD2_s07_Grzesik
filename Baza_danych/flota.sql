@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 07 Sty 2022, 19:09
--- Wersja serwera: 10.4.19-MariaDB
--- Wersja PHP: 7.3.28
+-- Czas generowania: 09 Sty 2022, 18:59
+-- Wersja serwera: 10.4.22-MariaDB
+-- Wersja PHP: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,6 +24,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `czynnosci`
+--
+
+CREATE TABLE `czynnosci` (
+  `id_czynnosci` int(11) NOT NULL,
+  `nazwa_czynnosci` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `czynnosci`
+--
+
+INSERT INTO `czynnosci` (`id_czynnosci`, `nazwa_czynnosci`) VALUES
+(1, 'Tankowanie'),
+(2, 'Płyn do spryskiwaczy');
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `eksploatacja`
 --
 
@@ -32,8 +51,16 @@ CREATE TABLE `eksploatacja` (
   `id_pojazdu` int(11) DEFAULT NULL,
   `nazwa_czynnsci` varchar(255) DEFAULT NULL,
   `koszt` float(6,2) DEFAULT NULL,
-  `id_pracownika` int(11) DEFAULT NULL
+  `id_pracownika` int(11) DEFAULT NULL,
+  `data_wykonania` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `eksploatacja`
+--
+
+INSERT INTO `eksploatacja` (`id_eksploatacji`, `id_pojazdu`, `nazwa_czynnsci`, `koszt`, `id_pracownika`, `data_wykonania`) VALUES
+(4, 17, 'Płyn do spryskiwaczy', 490.00, 2, '2022-01-06');
 
 -- --------------------------------------------------------
 
@@ -112,7 +139,8 @@ CREATE TABLE `opiekun` (
 --
 
 INSERT INTO `opiekun` (`id_opiekuna`, `id_pracownika`, `id_pojazdu`) VALUES
-(3, 2, 16);
+(3, 2, 16),
+(4, 4, 17);
 
 -- --------------------------------------------------------
 
@@ -139,7 +167,8 @@ CREATE TABLE `pojazd` (
 INSERT INTO `pojazd` (`id_pojazdu`, `nr_rejestracyjny`, `vin`, `id_modelu`, `id_typu_pojazdu`, `rok_produkcji`, `przebieg`, `id_przeznaczenia`, `id_wyposazenia`) VALUES
 (1, 'TEST1', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (2, 'TEST2', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(16, 'test321', '123', 7, 1, 2013, 123, 1, 1);
+(16, 'test321', '123', 7, 1, 2013, 123, 1, 1),
+(17, 'SGJ2GMD', '123123123123', 7, 1, 1990, 12222, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -166,7 +195,8 @@ CREATE TABLE `pracownik` (
 
 INSERT INTO `pracownik` (`id_pracownika`, `imie`, `nazwisko`, `nr_tel`, `pesel`, `id_stanowiska`, `adres`, `login`, `haslo`, `miejscowosc`) VALUES
 (1, 'superadmin', 'superadmin', 123456789, 1234567890, 1, 'super 1', 'superadmin', '123', 'Superancka'),
-(2, 'Test123', 'Testowy321', 123123123, 2147483647, 1, 'testa 12', 'test', '123', 'Testowo');
+(2, 'Test123', 'Testowy321', 123123123, 2147483647, 1, 'testa 12', 'test', '123', 'Testowo'),
+(4, 'jan', 'kurwiszon', 2147483647, 997, 2, 'chujowice', 'jan', '123', 'warszawa');
 
 -- --------------------------------------------------------
 
@@ -197,8 +227,17 @@ CREATE TABLE `serwis` (
   `id_pojazdu` int(11) DEFAULT NULL,
   `data_ostatniego_przegladu` date DEFAULT NULL,
   `nazwa_serwisu` varchar(255) DEFAULT NULL,
-  `id_uslugi` int(11) DEFAULT NULL
+  `id_uslugi` int(11) DEFAULT NULL,
+  `koszt` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `serwis`
+--
+
+INSERT INTO `serwis` (`id_serwisu`, `id_pojazdu`, `data_ostatniego_przegladu`, `nazwa_serwisu`, `id_uslugi`, `koszt`) VALUES
+(5, 17, '2022-01-06', 'jebaćgudysia', 1, 15),
+(6, 1, '2022-01-09', 'przegladzimowy1', 2, 250);
 
 -- --------------------------------------------------------
 
@@ -247,9 +286,16 @@ INSERT INTO `typ_pojazdu` (`id_typu_pojazdu`, `nazwa_typu`) VALUES
 
 CREATE TABLE `usluga` (
   `id_uslugi` int(11) NOT NULL,
-  `nazwa_uslugi` varchar(255) DEFAULT NULL,
-  `koszt` float(6,2) DEFAULT NULL
+  `nazwa_uslugi` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `usluga`
+--
+
+INSERT INTO `usluga` (`id_uslugi`, `nazwa_uslugi`) VALUES
+(1, 'lakierowanie'),
+(2, 'wymiana opon');
 
 -- --------------------------------------------------------
 
@@ -275,11 +321,18 @@ INSERT INTO `wypozyczenia` (`id_wypozyczenia`, `id_pojazdu`, `id_pracownika`, `d
 (2, 1, 1, '2022-01-02', '2022-01-03', 'test'),
 (3, 2, 2, '2022-01-06', '2022-01-07', 'TEST2'),
 (4, 2, 2, '2021-12-28', '2022-01-01', 'test testu'),
-(5, 2, 2, '2021-12-14', '2021-12-16', 'dasdsa');
+(5, 2, 2, '2021-12-14', '2021-12-16', 'dasdsa'),
+(6, 16, 2, '2022-01-06', '2022-01-21', 'do babci jade');
 
 --
 -- Indeksy dla zrzutów tabel
 --
+
+--
+-- Indeksy dla tabeli `czynnosci`
+--
+ALTER TABLE `czynnosci`
+  ADD PRIMARY KEY (`id_czynnosci`);
 
 --
 -- Indeksy dla tabeli `eksploatacja`
@@ -380,10 +433,16 @@ ALTER TABLE `wypozyczenia`
 --
 
 --
+-- AUTO_INCREMENT dla tabeli `czynnosci`
+--
+ALTER TABLE `czynnosci`
+  MODIFY `id_czynnosci` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT dla tabeli `eksploatacja`
 --
 ALTER TABLE `eksploatacja`
-  MODIFY `id_eksploatacji` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_eksploatacji` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT dla tabeli `element_wyposazenia`
@@ -407,19 +466,19 @@ ALTER TABLE `model`
 -- AUTO_INCREMENT dla tabeli `opiekun`
 --
 ALTER TABLE `opiekun`
-  MODIFY `id_opiekuna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_opiekuna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT dla tabeli `pojazd`
 --
 ALTER TABLE `pojazd`
-  MODIFY `id_pojazdu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_pojazdu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT dla tabeli `pracownik`
 --
 ALTER TABLE `pracownik`
-  MODIFY `id_pracownika` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_pracownika` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT dla tabeli `przeznaczenie`
@@ -431,7 +490,7 @@ ALTER TABLE `przeznaczenie`
 -- AUTO_INCREMENT dla tabeli `serwis`
 --
 ALTER TABLE `serwis`
-  MODIFY `id_serwisu` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_serwisu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT dla tabeli `stanowisko`
@@ -449,13 +508,13 @@ ALTER TABLE `typ_pojazdu`
 -- AUTO_INCREMENT dla tabeli `usluga`
 --
 ALTER TABLE `usluga`
-  MODIFY `id_uslugi` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_uslugi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT dla tabeli `wypozyczenia`
 --
 ALTER TABLE `wypozyczenia`
-  MODIFY `id_wypozyczenia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_wypozyczenia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Ograniczenia dla zrzutów tabel

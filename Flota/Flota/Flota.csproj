@@ -223,6 +223,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Wybor_Pojazdu.resx">
       <DependentUpon>Wybor_Pojazdu.cs</DependentUpon>
@@ -266,6 +267,24 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\automotive-gear-oil2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car-report2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-db2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keys2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maintenance2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
