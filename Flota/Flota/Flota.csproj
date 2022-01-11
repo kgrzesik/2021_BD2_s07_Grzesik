@@ -286,5 +286,23 @@
   <ItemGroup>
     <None Include="Resources\team2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\automotive-gear-oil21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car-report21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-db21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keys21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maintenance21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team21.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

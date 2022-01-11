@@ -51,19 +51,13 @@ namespace Flota
 
             MySqlConnection connect = null;
             connect = wypozyczenia.connect();
-            String query = "SELECT * FROM wypozyczenia WHERE((data_od >= '" + dataOd.Value.ToString("yyyy-MM-dd") + "' AND data_od <= '" + dataDo.Value.ToString("yyyy-MM-dd") + "') OR(data_do >= '" + dataOd.Value.ToString("yyyy-MM-dd") + "' AND data_do <= '" + dataDo.Value.ToString("yyyy-MM-dd") + "') OR(data_od <= '" + dataOd.Value.ToString("yyyy-MM-dd") + "' AND data_do >= '" + dataDo.Value.ToString("yyyy-MM-dd") + "'));";
-            MySqlCommand commandDatabase = new MySqlCommand(query, connect);
-            MySqlDataReader reader;
-            reader = commandDatabase.ExecuteReader();
-            if (!reader.HasRows)
-            {
-               
-            }
-
-            else
-            {
-                MessageBox.Show("żaden pojazd w tym terminie nie jest wypożyczny");
-            }
+            String query = "SELECT poj.nr_rejestracyjny AS 'Numer rejestracyjny', prac.login AS 'Nazwa użytkownika', w.data_od AS 'Data od', w.data_do AS 'Data do', w.powod AS 'Powód' FROM pojazd AS poj JOIN wypozyczenia AS w ON poj.id_pojazdu = w.id_pojazdu JOIN pracownik AS prac ON w.id_pracownika = prac.id_pracownika WHERE((data_od >= '" + dataOd.Value.ToString("yyyy-MM-dd") + "' AND data_od <= '" + dataDo.Value.ToString("yyyy-MM-dd") + "') OR(data_do >= '" + dataOd.Value.ToString("yyyy-MM-dd") + "' AND data_do <= '" + dataDo.Value.ToString("yyyy-MM-dd") + "') OR(data_od <= '" + dataOd.Value.ToString("yyyy-MM-dd") + "' AND data_do >= '" + dataDo.Value.ToString("yyyy-MM-dd") + "')); ";
+            MySqlDataAdapter aWyp = new MySqlDataAdapter(query, connect);
+            //MySqlCommand commandDatabase = new MySqlCommand(query, connect);
+            //MySqlDataReader reader;
+            DataTable tbWyp = new DataTable();
+            aWyp.Fill(tbWyp);
+            listaWyp.DataSource = tbWyp;
         }
     }
 }
