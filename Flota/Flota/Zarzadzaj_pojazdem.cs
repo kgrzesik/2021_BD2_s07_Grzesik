@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Flota
 {
-    public partial class Zarządzaj_pojazdem : Form
+    public partial class Zarzadzaj_pojazdem : Form
     {
         String login;
-        public Zarządzaj_pojazdem()
+        public Zarzadzaj_pojazdem()
         {
             InitializeComponent();
         }

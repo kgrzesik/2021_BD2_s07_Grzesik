@@ -48,106 +48,115 @@ namespace Flota
             this.label9 = new System.Windows.Forms.Label();
             this.txtHaslo2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.zalogowany = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.txtMiejscowosc = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtStanowisko = new System.Windows.Forms.ComboBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.zalogowany = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(94, 44);
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(192, 124);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.Size = new System.Drawing.Size(37, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Imię:";
             // 
             // txtImie
             // 
-            this.txtImie.Location = new System.Drawing.Point(184, 41);
+            this.txtImie.Location = new System.Drawing.Point(238, 121);
             this.txtImie.Name = "txtImie";
-            this.txtImie.Size = new System.Drawing.Size(100, 20);
+            this.txtImie.Size = new System.Drawing.Size(100, 22);
             this.txtImie.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(94, 75);
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(155, 155);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(71, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Nazwisko:";
             // 
             // txtNazwisko
             // 
-            this.txtNazwisko.Location = new System.Drawing.Point(184, 72);
+            this.txtNazwisko.Location = new System.Drawing.Point(238, 152);
             this.txtNazwisko.Name = "txtNazwisko";
-            this.txtNazwisko.Size = new System.Drawing.Size(100, 20);
+            this.txtNazwisko.Size = new System.Drawing.Size(100, 22);
             this.txtNazwisko.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(94, 105);
+            this.label3.BackColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(177, 185);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(55, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "Nr Tel.:";
             // 
             // txtTel
             // 
-            this.txtTel.Location = new System.Drawing.Point(184, 102);
+            this.txtTel.Location = new System.Drawing.Point(238, 182);
             this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(100, 20);
+            this.txtTel.Size = new System.Drawing.Size(100, 22);
             this.txtTel.TabIndex = 6;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(94, 133);
+            this.label5.BackColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(167, 213);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.Size = new System.Drawing.Size(56, 17);
             this.label5.TabIndex = 9;
             this.label5.Text = "PESEL:";
             // 
             // txtPesel
             // 
-            this.txtPesel.Location = new System.Drawing.Point(184, 130);
+            this.txtPesel.Location = new System.Drawing.Point(238, 210);
             this.txtPesel.Name = "txtPesel";
-            this.txtPesel.Size = new System.Drawing.Size(100, 20);
+            this.txtPesel.Size = new System.Drawing.Size(100, 22);
             this.txtPesel.TabIndex = 8;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(94, 163);
+            this.label6.BackColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(141, 242);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
+            this.label6.Size = new System.Drawing.Size(79, 17);
             this.label6.TabIndex = 11;
             this.label6.Text = "Stanowisko";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(94, 189);
+            this.label7.BackColor = System.Drawing.SystemColors.Control;
+            this.label7.Location = new System.Drawing.Point(181, 272);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 13);
+            this.label7.Size = new System.Drawing.Size(45, 17);
             this.label7.TabIndex = 13;
             this.label7.Text = "Adres";
             // 
             // txtAdres
             // 
-            this.txtAdres.Location = new System.Drawing.Point(184, 186);
+            this.txtAdres.Location = new System.Drawing.Point(238, 266);
             this.txtAdres.Name = "txtAdres";
-            this.txtAdres.Size = new System.Drawing.Size(100, 20);
+            this.txtAdres.Size = new System.Drawing.Size(100, 22);
             this.txtAdres.TabIndex = 12;
             // 
             // dodaj_uzytkow
             // 
             this.dodaj_uzytkow.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dodaj_uzytkow.Location = new System.Drawing.Point(52, 366);
+            this.dodaj_uzytkow.Location = new System.Drawing.Point(106, 446);
             this.dodaj_uzytkow.Margin = new System.Windows.Forms.Padding(2);
             this.dodaj_uzytkow.Name = "dodaj_uzytkow";
             this.dodaj_uzytkow.Size = new System.Drawing.Size(118, 52);
@@ -159,7 +168,7 @@ namespace Flota
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button1.Location = new System.Drawing.Point(218, 366);
+            this.button1.Location = new System.Drawing.Point(272, 446);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 52);
@@ -170,103 +179,125 @@ namespace Flota
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(184, 262);
+            this.txtLogin.Location = new System.Drawing.Point(238, 342);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(100, 20);
+            this.txtLogin.Size = new System.Drawing.Size(100, 22);
             this.txtLogin.TabIndex = 14;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(94, 265);
+            this.label8.BackColor = System.Drawing.SystemColors.Control;
+            this.label8.Location = new System.Drawing.Point(180, 345);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 13);
+            this.label8.Size = new System.Drawing.Size(47, 17);
             this.label8.TabIndex = 15;
             this.label8.Text = "Login:";
             // 
             // txtHaslo
             // 
-            this.txtHaslo.Location = new System.Drawing.Point(184, 288);
+            this.txtHaslo.Location = new System.Drawing.Point(238, 368);
             this.txtHaslo.Name = "txtHaslo";
-            this.txtHaslo.Size = new System.Drawing.Size(100, 20);
+            this.txtHaslo.Size = new System.Drawing.Size(100, 22);
             this.txtHaslo.TabIndex = 16;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(94, 291);
+            this.label9.BackColor = System.Drawing.SystemColors.Control;
+            this.label9.Location = new System.Drawing.Point(177, 371);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(39, 13);
+            this.label9.Size = new System.Drawing.Size(48, 17);
             this.label9.TabIndex = 17;
             this.label9.Text = "Hasło:";
             // 
             // txtHaslo2
             // 
-            this.txtHaslo2.Location = new System.Drawing.Point(184, 314);
+            this.txtHaslo2.Location = new System.Drawing.Point(238, 394);
             this.txtHaslo2.Name = "txtHaslo2";
-            this.txtHaslo2.Size = new System.Drawing.Size(100, 20);
+            this.txtHaslo2.Size = new System.Drawing.Size(100, 22);
             this.txtHaslo2.TabIndex = 18;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(94, 317);
+            this.label10.BackColor = System.Drawing.SystemColors.Control;
+            this.label10.Location = new System.Drawing.Point(107, 397);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(86, 13);
+            this.label10.Size = new System.Drawing.Size(111, 17);
             this.label10.TabIndex = 19;
             this.label10.Text = "Potwierdź hasło:";
             // 
-            // zalogowany
-            // 
-            this.zalogowany.AutoSize = true;
-            this.zalogowany.Location = new System.Drawing.Point(107, 9);
-            this.zalogowany.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.zalogowany.Name = "zalogowany";
-            this.zalogowany.Size = new System.Drawing.Size(0, 13);
-            this.zalogowany.TabIndex = 57;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(11, 9);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(95, 13);
-            this.label11.TabIndex = 56;
-            this.label11.Text = "Zalogowano jako: ";
-            // 
             // txtMiejscowosc
             // 
-            this.txtMiejscowosc.Location = new System.Drawing.Point(184, 212);
+            this.txtMiejscowosc.Location = new System.Drawing.Point(238, 292);
             this.txtMiejscowosc.Name = "txtMiejscowosc";
-            this.txtMiejscowosc.Size = new System.Drawing.Size(100, 20);
+            this.txtMiejscowosc.Size = new System.Drawing.Size(100, 22);
             this.txtMiejscowosc.TabIndex = 58;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(94, 215);
+            this.label12.BackColor = System.Drawing.SystemColors.Control;
+            this.label12.Location = new System.Drawing.Point(134, 295);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(68, 13);
+            this.label12.Size = new System.Drawing.Size(86, 17);
             this.label12.TabIndex = 59;
             this.label12.Text = "Miejscowość";
             // 
             // txtStanowisko
             // 
             this.txtStanowisko.FormattingEnabled = true;
-            this.txtStanowisko.Location = new System.Drawing.Point(184, 159);
+            this.txtStanowisko.Location = new System.Drawing.Point(238, 239);
             this.txtStanowisko.Name = "txtStanowisko";
-            this.txtStanowisko.Size = new System.Drawing.Size(100, 21);
+            this.txtStanowisko.Size = new System.Drawing.Size(100, 24);
             this.txtStanowisko.TabIndex = 60;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.zalogowany);
+            this.panel3.Location = new System.Drawing.Point(68, 21);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(390, 72);
+            this.panel3.TabIndex = 78;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(13, 26);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(123, 17);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Zalogowano jako: ";
+            // 
+            // zalogowany
+            // 
+            this.zalogowany.AutoSize = true;
+            this.zalogowany.Location = new System.Drawing.Point(155, 26);
+            this.zalogowany.Name = "zalogowany";
+            this.zalogowany.Size = new System.Drawing.Size(0, 17);
+            this.zalogowany.TabIndex = 9;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(68, 110);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(390, 422);
+            this.panel1.TabIndex = 79;
             // 
             // DodajUzytkownika
             // 
-            this.ClientSize = new System.Drawing.Size(388, 461);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(534, 619);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.txtStanowisko);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtMiejscowosc);
-            this.Controls.Add(this.zalogowany);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dodaj_uzytkow);
             this.Controls.Add(this.label10);
@@ -286,8 +317,11 @@ namespace Flota
             this.Controls.Add(this.txtNazwisko);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtImie);
+            this.Controls.Add(this.panel1);
             this.Name = "DodajUzytkownika";
             this.Load += new System.EventHandler(this.DodajUzytkownika_Load);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,10 +369,12 @@ namespace Flota
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtHaslo2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label zalogowany;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtMiejscowosc;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox txtStanowisko;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label zalogowany;
+        private System.Windows.Forms.Panel panel1;
     }
 }

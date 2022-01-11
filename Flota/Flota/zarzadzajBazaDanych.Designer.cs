@@ -31,65 +31,107 @@ namespace Flota
         {
             this.kopiaBazy = new System.Windows.Forms.Button();
             this.powrotMenu = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.zalogowany = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kopiaBazy
             // 
-            this.kopiaBazy.Location = new System.Drawing.Point(146, 140);
-            this.kopiaBazy.Margin = new System.Windows.Forms.Padding(2);
+            this.kopiaBazy.Location = new System.Drawing.Point(192, 74);
+            this.kopiaBazy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kopiaBazy.Name = "kopiaBazy";
-            this.kopiaBazy.Size = new System.Drawing.Size(137, 83);
+            this.kopiaBazy.Size = new System.Drawing.Size(278, 102);
             this.kopiaBazy.TabIndex = 0;
             this.kopiaBazy.Text = "Wykonaj kopię zapsową bazy danych";
             this.kopiaBazy.UseVisualStyleBackColor = true;
+            this.kopiaBazy.Click += new System.EventHandler(this.kopiaBazy_Click);
             // 
             // powrotMenu
             // 
-            this.powrotMenu.Location = new System.Drawing.Point(330, 140);
-            this.powrotMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.powrotMenu.Location = new System.Drawing.Point(50, 7);
+            this.powrotMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.powrotMenu.Name = "powrotMenu";
-            this.powrotMenu.Size = new System.Drawing.Size(137, 83);
+            this.powrotMenu.Size = new System.Drawing.Size(175, 43);
             this.powrotMenu.TabIndex = 1;
             this.powrotMenu.Text = "Powrót";
             this.powrotMenu.UseVisualStyleBackColor = true;
             this.powrotMenu.Click += new System.EventHandler(this.powrotMenu_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.powrotMenu);
+            this.panel2.Location = new System.Drawing.Point(448, 35);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(265, 58);
+            this.panel2.TabIndex = 56;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.zalogowany);
+            this.panel3.Location = new System.Drawing.Point(55, 35);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(388, 58);
+            this.panel3.TabIndex = 55;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(14, 20);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(123, 17);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Zalogowano jako: ";
+            // 
             // zalogowany
             // 
             this.zalogowany.AutoSize = true;
-            this.zalogowany.Location = new System.Drawing.Point(107, 9);
-            this.zalogowany.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.zalogowany.Location = new System.Drawing.Point(160, 20);
             this.zalogowany.Name = "zalogowany";
-            this.zalogowany.Size = new System.Drawing.Size(0, 13);
-            this.zalogowany.TabIndex = 11;
+            this.zalogowany.Size = new System.Drawing.Size(0, 17);
+            this.zalogowany.TabIndex = 9;
             // 
-            // label1
+            // panel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Zalogowano jako: ";
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.kopiaBazy);
+            this.panel1.Location = new System.Drawing.Point(55, 118);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(658, 265);
+            this.panel1.TabIndex = 57;
             // 
             // zarzadzajBazaDanych
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
-            this.Controls.Add(this.zalogowany);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.powrotMenu);
-            this.Controls.Add(this.kopiaBazy);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "zarzadzajBazaDanych";
             this.Text = "zarzadzajBazaDanych";
             this.Load += new System.EventHandler(this.zarzadzajBazaDanych_Load);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -97,7 +139,10 @@ namespace Flota
 
         private System.Windows.Forms.Button kopiaBazy;
         private System.Windows.Forms.Button powrotMenu;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label zalogowany;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

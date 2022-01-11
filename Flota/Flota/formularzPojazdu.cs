@@ -96,7 +96,7 @@ namespace Flota
         private void powrotZarzadzajPojazdem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Zarządzaj_pojazdem zp = new Zarządzaj_pojazdem();
+            Zarzadzaj_pojazdem zp = new Zarzadzaj_pojazdem();
             zp.user(login);
             zp.Show();
         }
