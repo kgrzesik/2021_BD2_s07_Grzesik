@@ -94,8 +94,48 @@ namespace Flota
         }
         private void Menu_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show();
             zalogowany.Text = login;
+            bazaDanych pobieraniedanych = new bazaDanych();
+            MySqlConnection pobieranie = null;
+            pobieranie = pobieraniedanych.connect();
+            MySqlCommand commmandStanowisko = new MySqlCommand("SELECT id_stanowiska FROM pracownik WHERE login='" + login + "'", pobieranie);
+            MySqlDataReader readStanowisko;
+            readStanowisko = commmandStanowisko.ExecuteReader();
+            string stanowiskoZalogowanego = "";
+            if (readStanowisko.Read())
+            {
+                stanowiskoZalogowanego = readStanowisko.GetString(0);
+            }
+
+            readStanowisko.Close();
+            if (Int64.Parse(stanowiskoZalogowanego) == 2) //flotmistrz
+            {
+                zarzadzajBazaDanych.Enabled = false;
+                zarzadzajUzytkownikiem.Enabled = false;
+                czynnosciEksploatacyjne.Enabled = false;
+                czynnosciSerwisowe.Enabled = false;
+                wypozyczenia.Enabled = false;
+            }
+            if (Int64.Parse(stanowiskoZalogowanego) == 3) //pracownik
+            {
+                zarzadzajBazaDanych.Enabled = false;
+                zarzadzajUzytkownikiem.Enabled = false;
+                zarzadzajPojazdem.Enabled = false;
+                czynnosciSerwisowe.Enabled = false;
+            }
+            if (Int64.Parse(stanowiskoZalogowanego) == 4) //opiekun
+            {
+                zarzadzajBazaDanych.Enabled = false;
+                zarzadzajUzytkownikiem.Enabled = false;
+                zarzadzajPojazdem.Enabled = false;
+            }
+            if (Int64.Parse(stanowiskoZalogowanego) == 5) //opiekun
+            {
+                zarzadzajPojazdem.Enabled = false;
+                czynnosciSerwisowe.Enabled = false;
+                czynnosciEksploatacyjne.Enabled = false;
+                wypozyczenia.Enabled = false;
+            }
         }
         public void user(String user)
         {

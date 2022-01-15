@@ -55,7 +55,16 @@ namespace Flota
                         string caption = "Sukces";
                         DialogResult result;
                         result = MessageBox.Show(message, caption);
-
+                        txtStanowisko.Text = "--Wybierz--";
+                        txtImie.Text = "";
+                        txtNazwisko.Text = "";
+                        txtTel.Text = "";
+                        txtPesel.Text = "";
+                        txtAdres.Text = "";
+                        txtMiejscowosc.Text = "";
+                        txtLogin.Text = "";
+                        txtHaslo.Text = "";
+                        txtHaslo2.Text = "";
                         connect.Close();
                   }
                     else

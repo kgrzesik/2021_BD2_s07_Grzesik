@@ -47,6 +47,7 @@ namespace Flota
             textPojazd.DataSource = tbpoj;
             textPojazd.DisplayMember = "nr_rejestracyjny";
             textPojazd.ValueMember = "id_pojazdu";
+            textPojazd.Text = "-- Wybierz --";
             uzytkownik = new MySqlDataAdapter("SELECT login FROM flota.pracownik WHERE login='"+login+"'", czytaj);
             uzytkownik.Fill(tbuz);
             textWypozyczajacy.DataSource = tbuz;
@@ -90,6 +91,8 @@ namespace Flota
                 MySqlCommand changePassword = new MySqlCommand("INSERT INTO wypozyczenia (id_pojazdu, id_pracownika, data_od, data_do, powod) VALUES ("+poj+","+nrusera+",'"+ dataOd.Value.ToString("yyyy-MM-dd") + "','"+ dataDo.Value.ToString("yyyy-MM-dd") + "', '"+ textPowod.Text+"')", termin);
                 changePassword.ExecuteReader();
                 MessageBox.Show("Wypożyczenie zostało dodane");
+                textPojazd.Text = "-- Wybierz --";
+                textPowod.Text = "";
             }
             else
             {

@@ -46,17 +46,28 @@ namespace Flota
         private void Serwis_Load(object sender, EventArgs e)
         {
             zalogowany.Text = login;
-            pojazdy = new MySqlDataAdapter("SELECT * FROM flota.pojazd", czytaj);
+            bazaDanych wypozyczenia = new bazaDanych();
+            MySqlConnection nru = null;
+            nru = wypozyczenia.connect();
+            MySqlCommand commandNru = new MySqlCommand("SELECT id_pracownika FROM pracownik WHERE login='" + login + "'", nru);
+            MySqlDataReader readernru;
+            readernru = commandNru.ExecuteReader();
+            readernru.Read();
+            var nrusera = readernru.GetString(0);
+            readernru.Close();
+            pojazdy = new MySqlDataAdapter("SELECT poj.id_pojazdu, poj.nr_rejestracyjny FROM pracownik AS prac JOIN opiekun AS o ON prac.id_pracownika=o.id_pracownika JOIN pojazd AS poj ON o.id_pojazdu = poj.id_pojazdu WHERE o.id_pracownika="+ nrusera + ";", nru);
             pojazdy.Fill(tbpoj);
             textPojazd.DataSource = tbpoj;
             textPojazd.DisplayMember = "nr_rejestracyjny";
             textPojazd.ValueMember = "id_pojazdu";
+            textPojazd.Text = "--Wybierz--";
 
             usluga = new MySqlDataAdapter("SELECT * FROM flota.usluga", czytaj);
             usluga.Fill(tbus);
             textUsluga.DataSource = tbus;
             textUsluga.DisplayMember = "nazwa_uslugi";
             textUsluga.ValueMember = "id_uslugi";
+            textUsluga.Text = "--Wybierz--";
         }
 
         private void historia_Click(object sender, EventArgs e)
@@ -97,6 +108,10 @@ namespace Flota
                 MySqlCommand changePassword = new MySqlCommand("INSERT INTO flota.serwis (id_pojazdu, data_ostatniego_przegladu, nazwa_serwisu, id_uslugi, koszt) VALUES ('" + poj + "','" + dataOstPrzeg.Value.ToString("yyyy-MM-dd") + "','" + serwisName.Text + "','" + usluga + "','" + kosztText.Text + "')", serwi);
                 changePassword.ExecuteReader();
                 MessageBox.Show("Dodano serwis");
+                textPojazd.Text = "--Wybierz--";
+                textUsluga.Text = "--Wybierz--";
+                serwisName.Text = "";
+                kosztText.Text = "";
             }
             else
             {

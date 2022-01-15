@@ -64,7 +64,7 @@ namespace Flota
             wyposazenie.DisplayMember = "nazwa_wypozazenia";
             wyposazenie.ValueMember = "id_wyposazenia";
             wyposazenie.Text = "--Wybierz--";
-            adapter6 = new MySqlDataAdapter("SELECT * FROM flota.pracownik", czytaj);
+            adapter6 = new MySqlDataAdapter("SELECT * FROM flota.pracownik WHERE id_stanowiska=4", czytaj);
             adapter6.Fill(table6);
             opiekun.DataSource = table6;
             opiekun.DisplayMember = "login";
@@ -210,6 +210,16 @@ namespace Flota
                     result = MessageBox.Show(message, caption);
 
                     connect.Close();
+                    marka.Text = "--Wybierz--";
+                    model.Text = "--Wybierz--";
+                    typ.Text = "--Wybierz--";
+                    przeznaczenie1.Text = "--Wybierz--";
+                    wyposazenie.Text = "--Wybierz--";
+                    opiekun.Text = "--Wybierz--";
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    comboBox1.Text = "";
                 }
                 else
                 {

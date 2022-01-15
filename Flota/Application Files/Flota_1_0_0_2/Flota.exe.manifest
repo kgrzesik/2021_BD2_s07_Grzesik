@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Flota.exe" size="133120">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Flota.exe" size="133632">
       <assemblyIdentity name="Flota" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CvC2SYvP+MuEeC2ZbB48uosxaoMX327r42tj5ehLkQ0=</dsig:DigestValue>
+        <dsig:DigestValue>gFPJK1MHYaBanQXpIVYikS+A7+9xbCHszIsnJCK/dXg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

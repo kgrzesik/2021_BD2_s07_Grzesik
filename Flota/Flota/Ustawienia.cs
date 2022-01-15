@@ -70,6 +70,9 @@ namespace Flota
                         MySqlCommand changePassword = new MySqlCommand("UPDATE pracownik SET haslo = " + newPassword.Text + " WHERE login = '" + login + "'", passcon);
                         changePassword.ExecuteReader();
                         MessageBox.Show("Hasło zostało zmienione");
+                        oldPassword.Text = "";
+                        newPassword.Text = "";
+                        newPasword2.Text = "";
                     }
                 }
                 else

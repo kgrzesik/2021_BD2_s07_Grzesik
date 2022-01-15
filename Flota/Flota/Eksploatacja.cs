@@ -33,12 +33,14 @@ namespace Flota
             textPojazd.DataSource = tbpoj;
             textPojazd.DisplayMember = "nr_rejestracyjny";
             textPojazd.ValueMember = "id_pojazdu";
+            textPojazd.Text = "-- Wybierz --";
 
             czynnosc = new MySqlDataAdapter("SELECT * FROM flota.czynnosci", czytaj);
             czynnosc.Fill(tbcz);
             textCzynnosc.DataSource = tbcz;
             textCzynnosc.DisplayMember = "nazwa_czynnosci";
             textCzynnosc.ValueMember = "id_czynnosci";
+            textCzynnosc.Text = "-- Wybierz --";
         }
 
         private void powrotButton_Click(object sender, EventArgs e)
@@ -100,6 +102,9 @@ namespace Flota
             MySqlCommand changePassword = new MySqlCommand("INSERT INTO flota.eksploatacja (id_pojazdu, nazwa_czynnsci, koszt, id_pracownika, data_wykonania) VALUES ('" + poj + "','" + textCzynnosc.Text + "','" + kosztText.Text + "','" + nrusera + "','" + dataWyk.Value.ToString("yyyy-MM-dd") + "')", exploatacja);
             changePassword.ExecuteReader();
             MessageBox.Show("Dodano exploatacje");
+                textCzynnosc.Text = "-- Wybierz --";
+                textPojazd.Text = "-- Wybierz --";
+                kosztText.Text = "";
 
             }
             else

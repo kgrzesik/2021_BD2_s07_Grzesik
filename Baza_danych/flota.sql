@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Czas generowania: 09 Sty 2022, 18:59
+-- Host: localhost
+-- Czas generowania: 14 Sty 2022, 15:26
 -- Wersja serwera: 10.4.22-MariaDB
--- Wersja PHP: 7.4.27
+-- Wersja PHP: 7.3.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -60,7 +60,11 @@ CREATE TABLE `eksploatacja` (
 --
 
 INSERT INTO `eksploatacja` (`id_eksploatacji`, `id_pojazdu`, `nazwa_czynnsci`, `koszt`, `id_pracownika`, `data_wykonania`) VALUES
-(4, 17, 'Płyn do spryskiwaczy', 490.00, 2, '2022-01-06');
+(4, 17, 'Płyn do spryskiwaczy', 490.00, 2, '2022-01-06'),
+(5, 18, 'Tankowanie', 150.00, 2, '2022-01-12'),
+(6, 17, 'Płyn do spryskiwaczy', 100.00, 6, '2022-01-13'),
+(7, 16, 'Tankowanie', 23.00, 2, '2022-01-13'),
+(8, 18, 'Tankowanie', 123.00, 2, '2022-01-13');
 
 -- --------------------------------------------------------
 
@@ -140,7 +144,11 @@ CREATE TABLE `opiekun` (
 
 INSERT INTO `opiekun` (`id_opiekuna`, `id_pracownika`, `id_pojazdu`) VALUES
 (3, 2, 16),
-(4, 4, 17);
+(4, 4, 17),
+(5, 2, 18),
+(6, 4, 19),
+(7, 10, 20),
+(8, 10, 21);
 
 -- --------------------------------------------------------
 
@@ -165,10 +173,12 @@ CREATE TABLE `pojazd` (
 --
 
 INSERT INTO `pojazd` (`id_pojazdu`, `nr_rejestracyjny`, `vin`, `id_modelu`, `id_typu_pojazdu`, `rok_produkcji`, `przebieg`, `id_przeznaczenia`, `id_wyposazenia`) VALUES
-(1, 'TEST1', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(2, 'TEST2', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (16, 'test321', '123', 7, 1, 2013, 123, 1, 1),
-(17, 'SGJ2GMD', '123123123123', 7, 1, 1990, 12222, 1, 1);
+(17, 'SGJ2GMD', '123123123123', 7, 1, 1990, 12222, 1, 1),
+(18, 'KK 12345', '123456789', 7, 1, 1999, 50000, 1, 1),
+(19, 'TESTTEST', 'VINVIN', 5, 1, 2017, 123, 1, 1),
+(20, 'Opiekun1', '123131231', 5, 1, 2019, 123, 1, 1),
+(21, 'Opiekun2', '1231312', 8, 1, 2016, 123, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -196,7 +206,13 @@ CREATE TABLE `pracownik` (
 INSERT INTO `pracownik` (`id_pracownika`, `imie`, `nazwisko`, `nr_tel`, `pesel`, `id_stanowiska`, `adres`, `login`, `haslo`, `miejscowosc`) VALUES
 (1, 'superadmin', 'superadmin', 123456789, 1234567890, 1, 'super 1', 'superadmin', '123', 'Superancka'),
 (2, 'Test123', 'Testowy321', 123123123, 2147483647, 1, 'testa 12', 'test', '123', 'Testowo'),
-(4, 'jan', 'kurwiszon', 2147483647, 997, 2, 'chujowice', 'jan', '123', 'warszawa');
+(4, 'jan', 'kurwiszon', 2147483647, 997, 2, 'chujowice', 'jan', '123', 'warszawa'),
+(6, 'Kuba', 'Jakiś', 2147483647, 123456789, 3, 'Aleja Gwiazd 13', 'testowykuba', '123', 'Warszawa'),
+(7, 'Ela', 'Elowska', 1231231231, 123123123, 3, 'adresadres', 'ela', '123', 'miejmiej'),
+(8, 'flotmistrz', 'flotmistrz', 1231231231, 123123123, 2, 'flotmistrz', 'flotmistrz', '123', 'flotmistrz'),
+(9, 'pracownik', 'pracownik', 1231231231, 123123123, 3, 'pracownik', 'pracownik', '123', 'pracownik'),
+(10, 'opiekun', 'opiekun', 1231231231, 123123123, 4, 'opiekun', 'opiekun', '123', 'opiekun'),
+(11, 'admin', 'admin', 1231231231, 123123123, 5, 'admin', 'admin', '123', 'admin');
 
 -- --------------------------------------------------------
 
@@ -236,8 +252,11 @@ CREATE TABLE `serwis` (
 --
 
 INSERT INTO `serwis` (`id_serwisu`, `id_pojazdu`, `data_ostatniego_przegladu`, `nazwa_serwisu`, `id_uslugi`, `koszt`) VALUES
-(5, 17, '2022-01-06', 'jebaćgudysia', 1, 15),
-(6, 1, '2022-01-09', 'przegladzimowy1', 2, 250);
+(5, 17, '2022-01-06', 'testowe\r\n', 1, 15),
+(7, 18, '2022-01-12', 'Wymiana', 2, 200),
+(8, 16, '2022-01-13', 'test', 1, 333),
+(9, 18, '2022-01-13', 'test', 2, 123),
+(10, 17, '2022-01-13', 'test123', 1, 200);
 
 -- --------------------------------------------------------
 
@@ -258,7 +277,8 @@ INSERT INTO `stanowisko` (`id_stanowiska`, `nazwa`) VALUES
 (1, 'Super Admin'),
 (2, 'Flotmistrz'),
 (3, 'Pracownik'),
-(4, 'Opiekun pojazdu');
+(4, 'Opiekun pojazdu'),
+(5, 'Admin');
 
 -- --------------------------------------------------------
 
@@ -317,12 +337,11 @@ CREATE TABLE `wypozyczenia` (
 --
 
 INSERT INTO `wypozyczenia` (`id_wypozyczenia`, `id_pojazdu`, `id_pracownika`, `data_od`, `data_do`, `powod`) VALUES
-(1, 1, 2, '2022-01-06', '2022-01-12', 'test'),
-(2, 1, 1, '2022-01-02', '2022-01-03', 'test'),
-(3, 2, 2, '2022-01-06', '2022-01-07', 'TEST2'),
-(4, 2, 2, '2021-12-28', '2022-01-01', 'test testu'),
-(5, 2, 2, '2021-12-14', '2021-12-16', 'dasdsa'),
-(6, 16, 2, '2022-01-06', '2022-01-21', 'do babci jade');
+(6, 16, 2, '2022-01-06', '2022-01-21', 'do babci jade'),
+(7, 18, 6, '2022-01-13', '2022-01-17', 'wyjazd'),
+(8, 17, 6, '2022-01-13', '2022-01-13', 'test'),
+(9, 16, 2, '2021-12-01', '2021-12-02', 'test'),
+(10, 16, 2, '2022-02-01', '2022-03-03', 'test');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -442,7 +461,7 @@ ALTER TABLE `czynnosci`
 -- AUTO_INCREMENT dla tabeli `eksploatacja`
 --
 ALTER TABLE `eksploatacja`
-  MODIFY `id_eksploatacji` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_eksploatacji` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT dla tabeli `element_wyposazenia`
@@ -466,19 +485,19 @@ ALTER TABLE `model`
 -- AUTO_INCREMENT dla tabeli `opiekun`
 --
 ALTER TABLE `opiekun`
-  MODIFY `id_opiekuna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_opiekuna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT dla tabeli `pojazd`
 --
 ALTER TABLE `pojazd`
-  MODIFY `id_pojazdu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_pojazdu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT dla tabeli `pracownik`
 --
 ALTER TABLE `pracownik`
-  MODIFY `id_pracownika` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_pracownika` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT dla tabeli `przeznaczenie`
@@ -490,13 +509,13 @@ ALTER TABLE `przeznaczenie`
 -- AUTO_INCREMENT dla tabeli `serwis`
 --
 ALTER TABLE `serwis`
-  MODIFY `id_serwisu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_serwisu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT dla tabeli `stanowisko`
 --
 ALTER TABLE `stanowisko`
-  MODIFY `id_stanowiska` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_stanowiska` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT dla tabeli `typ_pojazdu`
@@ -514,7 +533,7 @@ ALTER TABLE `usluga`
 -- AUTO_INCREMENT dla tabeli `wypozyczenia`
 --
 ALTER TABLE `wypozyczenia`
-  MODIFY `id_wypozyczenia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_wypozyczenia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Ograniczenia dla zrzutów tabel
