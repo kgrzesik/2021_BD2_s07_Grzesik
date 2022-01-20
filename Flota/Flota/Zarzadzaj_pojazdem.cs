@@ -51,5 +51,10 @@ namespace Flota
         {
             zalogowany.Text = login;
         }
+
+        private void helpZarzPoj_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "file://C:/Users/Piotrek/Desktop/Flota/manual/manual.chm");
+        }
     }
 }

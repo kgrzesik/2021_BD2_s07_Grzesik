@@ -38,6 +38,7 @@ namespace Flota
             this.label11 = new System.Windows.Forms.Label();
             this.zalogowany = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.helpWybUzyt = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -46,7 +47,7 @@ namespace Flota
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(372, 87);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 69);
             this.button1.TabIndex = 7;
@@ -56,7 +57,7 @@ namespace Flota
             // 
             // powrotZarzadzaniePojazdem
             // 
-            this.powrotZarzadzaniePojazdem.Location = new System.Drawing.Point(62, 2);
+            this.powrotZarzadzaniePojazdem.Location = new System.Drawing.Point(114, 3);
             this.powrotZarzadzaniePojazdem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.powrotZarzadzaniePojazdem.Name = "powrotZarzadzaniePojazdem";
             this.powrotZarzadzaniePojazdem.Size = new System.Drawing.Size(141, 51);
@@ -90,6 +91,7 @@ namespace Flota
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.helpWybUzyt);
             this.panel1.Controls.Add(this.powrotZarzadzaniePojazdem);
             this.panel1.Location = new System.Drawing.Point(423, 15);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -138,6 +140,17 @@ namespace Flota
             this.panel2.Size = new System.Drawing.Size(534, 364);
             this.panel2.TabIndex = 93;
             // 
+            // helpWybUzyt
+            // 
+            this.helpWybUzyt.Location = new System.Drawing.Point(4, 3);
+            this.helpWybUzyt.Margin = new System.Windows.Forms.Padding(4);
+            this.helpWybUzyt.Name = "helpWybUzyt";
+            this.helpWybUzyt.Size = new System.Drawing.Size(103, 51);
+            this.helpWybUzyt.TabIndex = 9;
+            this.helpWybUzyt.Text = "Pomoc";
+            this.helpWybUzyt.UseVisualStyleBackColor = true;
+            this.helpWybUzyt.Click += new System.EventHandler(this.helpWybUzyt_Click);
+            // 
             // WyborUzytkownika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -148,7 +161,7 @@ namespace Flota
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.listaUsr);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "WyborUzytkownika";
             this.Text = "WyborUzytkownika";
             this.Load += new System.EventHandler(this.WyborUzytkownika_Load);
@@ -171,5 +184,6 @@ namespace Flota
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label zalogowany;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button helpWybUzyt;
     }
 }

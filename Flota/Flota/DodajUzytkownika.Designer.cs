@@ -55,7 +55,9 @@ namespace Flota
             this.label11 = new System.Windows.Forms.Label();
             this.zalogowany = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.helpDodUzyt = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -72,7 +74,7 @@ namespace Flota
             // 
             this.txtImie.Location = new System.Drawing.Point(238, 121);
             this.txtImie.Name = "txtImie";
-            this.txtImie.Size = new System.Drawing.Size(100, 22);
+            this.txtImie.Size = new System.Drawing.Size(169, 22);
             this.txtImie.TabIndex = 2;
             // 
             // label2
@@ -89,7 +91,7 @@ namespace Flota
             // 
             this.txtNazwisko.Location = new System.Drawing.Point(238, 152);
             this.txtNazwisko.Name = "txtNazwisko";
-            this.txtNazwisko.Size = new System.Drawing.Size(100, 22);
+            this.txtNazwisko.Size = new System.Drawing.Size(169, 22);
             this.txtNazwisko.TabIndex = 4;
             // 
             // label3
@@ -106,7 +108,7 @@ namespace Flota
             // 
             this.txtTel.Location = new System.Drawing.Point(238, 182);
             this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(100, 22);
+            this.txtTel.Size = new System.Drawing.Size(169, 22);
             this.txtTel.TabIndex = 6;
             // 
             // label5
@@ -123,7 +125,7 @@ namespace Flota
             // 
             this.txtPesel.Location = new System.Drawing.Point(238, 210);
             this.txtPesel.Name = "txtPesel";
-            this.txtPesel.Size = new System.Drawing.Size(100, 22);
+            this.txtPesel.Size = new System.Drawing.Size(169, 22);
             this.txtPesel.TabIndex = 8;
             // 
             // label6
@@ -150,13 +152,13 @@ namespace Flota
             // 
             this.txtAdres.Location = new System.Drawing.Point(238, 266);
             this.txtAdres.Name = "txtAdres";
-            this.txtAdres.Size = new System.Drawing.Size(100, 22);
+            this.txtAdres.Size = new System.Drawing.Size(169, 22);
             this.txtAdres.TabIndex = 12;
             // 
             // dodaj_uzytkow
             // 
             this.dodaj_uzytkow.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dodaj_uzytkow.Location = new System.Drawing.Point(106, 446);
+            this.dodaj_uzytkow.Location = new System.Drawing.Point(126, 335);
             this.dodaj_uzytkow.Margin = new System.Windows.Forms.Padding(2);
             this.dodaj_uzytkow.Name = "dodaj_uzytkow";
             this.dodaj_uzytkow.Size = new System.Drawing.Size(118, 52);
@@ -168,7 +170,7 @@ namespace Flota
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button1.Location = new System.Drawing.Point(272, 446);
+            this.button1.Location = new System.Drawing.Point(248, 335);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 52);
@@ -181,7 +183,7 @@ namespace Flota
             // 
             this.txtLogin.Location = new System.Drawing.Point(238, 342);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(100, 22);
+            this.txtLogin.Size = new System.Drawing.Size(169, 22);
             this.txtLogin.TabIndex = 14;
             // 
             // label8
@@ -198,7 +200,7 @@ namespace Flota
             // 
             this.txtHaslo.Location = new System.Drawing.Point(238, 368);
             this.txtHaslo.Name = "txtHaslo";
-            this.txtHaslo.Size = new System.Drawing.Size(100, 22);
+            this.txtHaslo.Size = new System.Drawing.Size(169, 22);
             this.txtHaslo.TabIndex = 16;
             // 
             // label9
@@ -215,7 +217,7 @@ namespace Flota
             // 
             this.txtHaslo2.Location = new System.Drawing.Point(238, 394);
             this.txtHaslo2.Name = "txtHaslo2";
-            this.txtHaslo2.Size = new System.Drawing.Size(100, 22);
+            this.txtHaslo2.Size = new System.Drawing.Size(169, 22);
             this.txtHaslo2.TabIndex = 18;
             // 
             // label10
@@ -232,7 +234,7 @@ namespace Flota
             // 
             this.txtMiejscowosc.Location = new System.Drawing.Point(238, 292);
             this.txtMiejscowosc.Name = "txtMiejscowosc";
-            this.txtMiejscowosc.Size = new System.Drawing.Size(100, 22);
+            this.txtMiejscowosc.Size = new System.Drawing.Size(169, 22);
             this.txtMiejscowosc.TabIndex = 58;
             // 
             // label12
@@ -250,7 +252,7 @@ namespace Flota
             this.txtStanowisko.FormattingEnabled = true;
             this.txtStanowisko.Location = new System.Drawing.Point(238, 239);
             this.txtStanowisko.Name = "txtStanowisko";
-            this.txtStanowisko.Size = new System.Drawing.Size(100, 24);
+            this.txtStanowisko.Size = new System.Drawing.Size(169, 24);
             this.txtStanowisko.TabIndex = 60;
             // 
             // panel3
@@ -285,10 +287,24 @@ namespace Flota
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.helpDodUzyt);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.dodaj_uzytkow);
             this.panel1.Location = new System.Drawing.Point(68, 110);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(390, 422);
             this.panel1.TabIndex = 79;
+            // 
+            // helpDodUzyt
+            // 
+            this.helpDodUzyt.Location = new System.Drawing.Point(16, 335);
+            this.helpDodUzyt.Margin = new System.Windows.Forms.Padding(4);
+            this.helpDodUzyt.Name = "helpDodUzyt";
+            this.helpDodUzyt.Size = new System.Drawing.Size(103, 52);
+            this.helpDodUzyt.TabIndex = 22;
+            this.helpDodUzyt.Text = "Pomoc";
+            this.helpDodUzyt.UseVisualStyleBackColor = true;
+            this.helpDodUzyt.Click += new System.EventHandler(this.helpDodUzyt_Click);
             // 
             // DodajUzytkownika
             // 
@@ -298,8 +314,6 @@ namespace Flota
             this.Controls.Add(this.txtStanowisko);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtMiejscowosc);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dodaj_uzytkow);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtHaslo2);
             this.Controls.Add(this.label9);
@@ -322,6 +336,7 @@ namespace Flota
             this.Load += new System.EventHandler(this.DodajUzytkownika_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,5 +391,6 @@ namespace Flota
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label zalogowany;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button helpDodUzyt;
     }
 }

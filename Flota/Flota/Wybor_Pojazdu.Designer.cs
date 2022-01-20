@@ -38,6 +38,7 @@ namespace Flota
             this.zalogowany = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.helpWybPoj = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +68,7 @@ namespace Flota
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(484, 218);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 69);
             this.button1.TabIndex = 3;
@@ -77,10 +78,10 @@ namespace Flota
             // 
             // powrotZarzadzaniePojazdem
             // 
-            this.powrotZarzadzaniePojazdem.Location = new System.Drawing.Point(68, 2);
+            this.powrotZarzadzaniePojazdem.Location = new System.Drawing.Point(133, 3);
             this.powrotZarzadzaniePojazdem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.powrotZarzadzaniePojazdem.Name = "powrotZarzadzaniePojazdem";
-            this.powrotZarzadzaniePojazdem.Size = new System.Drawing.Size(141, 51);
+            this.powrotZarzadzaniePojazdem.Size = new System.Drawing.Size(117, 51);
             this.powrotZarzadzaniePojazdem.TabIndex = 2;
             this.powrotZarzadzaniePojazdem.Text = "Powrót";
             this.powrotZarzadzaniePojazdem.UseVisualStyleBackColor = true;
@@ -119,6 +120,7 @@ namespace Flota
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.helpWybPoj);
             this.panel1.Controls.Add(this.powrotZarzadzaniePojazdem);
             this.panel1.Location = new System.Drawing.Point(374, 23);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -135,6 +137,17 @@ namespace Flota
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(545, 372);
             this.panel2.TabIndex = 91;
+            // 
+            // helpWybPoj
+            // 
+            this.helpWybPoj.Location = new System.Drawing.Point(9, 3);
+            this.helpWybPoj.Margin = new System.Windows.Forms.Padding(4);
+            this.helpWybPoj.Name = "helpWybPoj";
+            this.helpWybPoj.Size = new System.Drawing.Size(109, 49);
+            this.helpWybPoj.TabIndex = 9;
+            this.helpWybPoj.Text = "Pomoc";
+            this.helpWybPoj.UseVisualStyleBackColor = true;
+            this.helpWybPoj.Click += new System.EventHandler(this.helpWybPoj_Click);
             // 
             // Wybor_Pojazdu
             // 
@@ -170,5 +183,6 @@ namespace Flota
         private System.Windows.Forms.Label zalogowany;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button helpWybPoj;
     }
 }

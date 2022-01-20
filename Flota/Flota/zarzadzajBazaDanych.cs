@@ -51,5 +51,10 @@ namespace Flota
             Process.Start(ps);
             MessageBox.Show("Pobrano backup");
         }
+
+        private void helpZarzBD_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "file://C:/Users/Piotrek/Desktop/Flota/manual/manual.chm");
+        }
     }
 }

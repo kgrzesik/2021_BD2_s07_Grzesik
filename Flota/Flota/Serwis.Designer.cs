@@ -47,6 +47,7 @@ namespace Flota
             this.zalogowany = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pomoc_wyp = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -55,7 +56,7 @@ namespace Flota
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button1.Location = new System.Drawing.Point(89, 11);
+            this.button1.Location = new System.Drawing.Point(136, 11);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 32);
@@ -68,7 +69,7 @@ namespace Flota
             // 
             this.textPojazd.FormattingEnabled = true;
             this.textPojazd.Location = new System.Drawing.Point(183, 19);
-            this.textPojazd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textPojazd.Margin = new System.Windows.Forms.Padding(4);
             this.textPojazd.Name = "textPojazd";
             this.textPojazd.Size = new System.Drawing.Size(265, 24);
             this.textPojazd.TabIndex = 43;
@@ -76,7 +77,7 @@ namespace Flota
             // serwisName
             // 
             this.serwisName.Location = new System.Drawing.Point(223, 151);
-            this.serwisName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.serwisName.Margin = new System.Windows.Forms.Padding(4);
             this.serwisName.Name = "serwisName";
             this.serwisName.Size = new System.Drawing.Size(265, 22);
             this.serwisName.TabIndex = 44;
@@ -85,7 +86,7 @@ namespace Flota
             // 
             this.textUsluga.FormattingEnabled = true;
             this.textUsluga.Location = new System.Drawing.Point(223, 210);
-            this.textUsluga.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textUsluga.Margin = new System.Windows.Forms.Padding(4);
             this.textUsluga.Name = "textUsluga";
             this.textUsluga.Size = new System.Drawing.Size(265, 24);
             this.textUsluga.TabIndex = 45;
@@ -93,7 +94,7 @@ namespace Flota
             // dataOstPrzeg
             // 
             this.dataOstPrzeg.Location = new System.Drawing.Point(223, 274);
-            this.dataOstPrzeg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataOstPrzeg.Margin = new System.Windows.Forms.Padding(4);
             this.dataOstPrzeg.Name = "dataOstPrzeg";
             this.dataOstPrzeg.Size = new System.Drawing.Size(265, 22);
             this.dataOstPrzeg.TabIndex = 46;
@@ -146,7 +147,7 @@ namespace Flota
             // kosztText
             // 
             this.kosztText.Location = new System.Drawing.Point(183, 266);
-            this.kosztText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kosztText.Margin = new System.Windows.Forms.Padding(4);
             this.kosztText.Name = "kosztText";
             this.kosztText.Size = new System.Drawing.Size(142, 22);
             this.kosztText.TabIndex = 53;
@@ -218,6 +219,7 @@ namespace Flota
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pomoc_wyp);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(404, 4);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -244,6 +246,17 @@ namespace Flota
             this.panel2.Size = new System.Drawing.Size(679, 338);
             this.panel2.TabIndex = 89;
             // 
+            // pomoc_wyp
+            // 
+            this.pomoc_wyp.Location = new System.Drawing.Point(23, 10);
+            this.pomoc_wyp.Margin = new System.Windows.Forms.Padding(4);
+            this.pomoc_wyp.Name = "pomoc_wyp";
+            this.pomoc_wyp.Size = new System.Drawing.Size(106, 33);
+            this.pomoc_wyp.TabIndex = 43;
+            this.pomoc_wyp.Text = "Pomoc";
+            this.pomoc_wyp.UseVisualStyleBackColor = true;
+            this.pomoc_wyp.Click += new System.EventHandler(this.pomoc_wyp_Click);
+            // 
             // Serwis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -256,7 +269,7 @@ namespace Flota
             this.Controls.Add(this.textUsluga);
             this.Controls.Add(this.serwisName);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Serwis";
             this.Text = "Serwis";
             this.Load += new System.EventHandler(this.Serwis_Load);
@@ -290,5 +303,6 @@ namespace Flota
         private System.Windows.Forms.Label zalogowany;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button pomoc_wyp;
     }
 }

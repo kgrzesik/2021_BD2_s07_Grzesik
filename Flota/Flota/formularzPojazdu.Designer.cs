@@ -56,6 +56,7 @@ namespace Flota
             this.zalogowany = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pomoc = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -63,7 +64,7 @@ namespace Flota
             // 
             // powrotZarzadzajPojazdem
             // 
-            this.powrotZarzadzajPojazdem.Location = new System.Drawing.Point(83, 9);
+            this.powrotZarzadzajPojazdem.Location = new System.Drawing.Point(134, 9);
             this.powrotZarzadzajPojazdem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.powrotZarzadzajPojazdem.Name = "powrotZarzadzajPojazdem";
             this.powrotZarzadzajPojazdem.Size = new System.Drawing.Size(161, 40);
@@ -195,7 +196,7 @@ namespace Flota
             // 
             this.marka.FormattingEnabled = true;
             this.marka.Location = new System.Drawing.Point(211, 218);
-            this.marka.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.marka.Margin = new System.Windows.Forms.Padding(4);
             this.marka.Name = "marka";
             this.marka.Size = new System.Drawing.Size(239, 24);
             this.marka.TabIndex = 20;
@@ -238,7 +239,7 @@ namespace Flota
             "1991",
             "1990"});
             this.comboBox1.Location = new System.Drawing.Point(211, 151);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(239, 24);
             this.comboBox1.TabIndex = 21;
@@ -246,7 +247,7 @@ namespace Flota
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(211, 186);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(239, 22);
             this.textBox3.TabIndex = 22;
@@ -255,7 +256,7 @@ namespace Flota
             // 
             this.model.FormattingEnabled = true;
             this.model.Location = new System.Drawing.Point(211, 250);
-            this.model.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.model.Margin = new System.Windows.Forms.Padding(4);
             this.model.Name = "model";
             this.model.Size = new System.Drawing.Size(239, 24);
             this.model.TabIndex = 23;
@@ -265,7 +266,7 @@ namespace Flota
             // 
             this.typ.FormattingEnabled = true;
             this.typ.Location = new System.Drawing.Point(211, 284);
-            this.typ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.typ.Margin = new System.Windows.Forms.Padding(4);
             this.typ.Name = "typ";
             this.typ.Size = new System.Drawing.Size(239, 24);
             this.typ.TabIndex = 24;
@@ -274,7 +275,7 @@ namespace Flota
             // 
             this.przeznaczenie1.FormattingEnabled = true;
             this.przeznaczenie1.Location = new System.Drawing.Point(211, 317);
-            this.przeznaczenie1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.przeznaczenie1.Margin = new System.Windows.Forms.Padding(4);
             this.przeznaczenie1.Name = "przeznaczenie1";
             this.przeznaczenie1.Size = new System.Drawing.Size(239, 24);
             this.przeznaczenie1.TabIndex = 25;
@@ -283,7 +284,7 @@ namespace Flota
             // 
             this.wyposazenie.FormattingEnabled = true;
             this.wyposazenie.Location = new System.Drawing.Point(211, 350);
-            this.wyposazenie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.wyposazenie.Margin = new System.Windows.Forms.Padding(4);
             this.wyposazenie.Name = "wyposazenie";
             this.wyposazenie.Size = new System.Drawing.Size(239, 24);
             this.wyposazenie.TabIndex = 26;
@@ -292,7 +293,7 @@ namespace Flota
             // 
             this.opiekun.FormattingEnabled = true;
             this.opiekun.Location = new System.Drawing.Point(211, 383);
-            this.opiekun.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.opiekun.Margin = new System.Windows.Forms.Padding(4);
             this.opiekun.Name = "opiekun";
             this.opiekun.Size = new System.Drawing.Size(239, 24);
             this.opiekun.TabIndex = 29;
@@ -351,12 +352,24 @@ namespace Flota
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pomoc);
             this.panel1.Controls.Add(this.powrotZarzadzajPojazdem);
             this.panel1.Location = new System.Drawing.Point(454, 10);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(309, 58);
             this.panel1.TabIndex = 32;
+            // 
+            // pomoc
+            // 
+            this.pomoc.Location = new System.Drawing.Point(15, 9);
+            this.pomoc.Margin = new System.Windows.Forms.Padding(4);
+            this.pomoc.Name = "pomoc";
+            this.pomoc.Size = new System.Drawing.Size(103, 39);
+            this.pomoc.TabIndex = 9;
+            this.pomoc.Text = "Pomoc";
+            this.pomoc.UseVisualStyleBackColor = true;
+            this.pomoc.Click += new System.EventHandler(this.pomoc_Click);
             // 
             // formularzPojazdu
             // 
@@ -429,5 +442,6 @@ namespace Flota
         private System.Windows.Forms.Label zalogowany;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button pomoc;
     }
 }

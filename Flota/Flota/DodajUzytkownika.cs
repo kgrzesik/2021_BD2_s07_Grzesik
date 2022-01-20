@@ -111,5 +111,10 @@ namespace Flota
             loginw = user;
             //zalogowany.Text = login;
         }
+
+        private void helpDodUzyt_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "file://C:/Users/Piotrek/Desktop/Flota/manual/manual.chm");
+        }
     }
 }

@@ -80,5 +80,10 @@ namespace Flota
             wu.user(login);
             wu.Show();
         }
+
+        private void helpWybUzyt_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "file://C:/Users/Piotrek/Desktop/Flota/manual/manual.chm");
+        }
     }
 }

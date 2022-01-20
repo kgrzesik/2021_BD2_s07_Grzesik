@@ -122,5 +122,10 @@ namespace Flota
 
             }
         }
+
+        private void pomoc_wyp_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "file://C:/Users/Piotrek/Desktop/Flota/manual/manual.chm");
+        }
     }
 }

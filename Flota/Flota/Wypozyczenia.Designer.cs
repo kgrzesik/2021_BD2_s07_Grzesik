@@ -48,16 +48,18 @@ namespace Flota
             this.label11 = new System.Windows.Forms.Label();
             this.zalogowany = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pomoc_wyp = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // powrotMenu
             // 
-            this.powrotMenu.Location = new System.Drawing.Point(399, 14);
-            this.powrotMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.powrotMenu.Location = new System.Drawing.Point(123, 5);
+            this.powrotMenu.Margin = new System.Windows.Forms.Padding(4);
             this.powrotMenu.Name = "powrotMenu";
-            this.powrotMenu.Size = new System.Drawing.Size(164, 48);
+            this.powrotMenu.Size = new System.Drawing.Size(131, 48);
             this.powrotMenu.TabIndex = 0;
             this.powrotMenu.Text = "Powrót do Menu";
             this.powrotMenu.UseVisualStyleBackColor = true;
@@ -66,7 +68,7 @@ namespace Flota
             // textPojazd
             // 
             this.textPojazd.Location = new System.Drawing.Point(227, 154);
-            this.textPojazd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textPojazd.Margin = new System.Windows.Forms.Padding(4);
             this.textPojazd.Name = "textPojazd";
             this.textPojazd.Size = new System.Drawing.Size(285, 24);
             this.textPojazd.TabIndex = 42;
@@ -75,7 +77,7 @@ namespace Flota
             // 
             this.textWypozyczajacy.FormattingEnabled = true;
             this.textWypozyczajacy.Location = new System.Drawing.Point(227, 187);
-            this.textWypozyczajacy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textWypozyczajacy.Margin = new System.Windows.Forms.Padding(4);
             this.textWypozyczajacy.Name = "textWypozyczajacy";
             this.textWypozyczajacy.Size = new System.Drawing.Size(285, 24);
             this.textWypozyczajacy.TabIndex = 43;
@@ -83,7 +85,7 @@ namespace Flota
             // dataOd
             // 
             this.dataOd.Location = new System.Drawing.Point(227, 220);
-            this.dataOd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataOd.Margin = new System.Windows.Forms.Padding(4);
             this.dataOd.Name = "dataOd";
             this.dataOd.Size = new System.Drawing.Size(285, 22);
             this.dataOd.TabIndex = 44;
@@ -91,7 +93,7 @@ namespace Flota
             // dataDo
             // 
             this.dataDo.Location = new System.Drawing.Point(227, 252);
-            this.dataDo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataDo.Margin = new System.Windows.Forms.Padding(4);
             this.dataDo.Name = "dataDo";
             this.dataDo.Size = new System.Drawing.Size(285, 22);
             this.dataDo.TabIndex = 45;
@@ -99,7 +101,7 @@ namespace Flota
             // textPowod
             // 
             this.textPowod.Location = new System.Drawing.Point(227, 284);
-            this.textPowod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textPowod.Margin = new System.Windows.Forms.Padding(4);
             this.textPowod.Name = "textPowod";
             this.textPowod.Size = new System.Drawing.Size(285, 22);
             this.textPowod.TabIndex = 46;
@@ -163,7 +165,7 @@ namespace Flota
             // potwierdz
             // 
             this.potwierdz.Location = new System.Drawing.Point(84, 250);
-            this.potwierdz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.potwierdz.Margin = new System.Windows.Forms.Padding(4);
             this.potwierdz.Name = "potwierdz";
             this.potwierdz.Size = new System.Drawing.Size(164, 74);
             this.potwierdz.TabIndex = 52;
@@ -174,7 +176,7 @@ namespace Flota
             // listaWyp
             // 
             this.listaWyp.Location = new System.Drawing.Point(299, 250);
-            this.listaWyp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listaWyp.Margin = new System.Windows.Forms.Padding(4);
             this.listaWyp.Name = "listaWyp";
             this.listaWyp.Size = new System.Drawing.Size(164, 74);
             this.listaWyp.TabIndex = 53;
@@ -196,6 +198,8 @@ namespace Flota
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pomoc_wyp);
+            this.panel1.Controls.Add(this.powrotMenu);
             this.panel1.Location = new System.Drawing.Point(354, 10);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
@@ -244,6 +248,17 @@ namespace Flota
             this.panel2.Size = new System.Drawing.Size(534, 358);
             this.panel2.TabIndex = 95;
             // 
+            // pomoc_wyp
+            // 
+            this.pomoc_wyp.Location = new System.Drawing.Point(4, 6);
+            this.pomoc_wyp.Margin = new System.Windows.Forms.Padding(4);
+            this.pomoc_wyp.Name = "pomoc_wyp";
+            this.pomoc_wyp.Size = new System.Drawing.Size(111, 47);
+            this.pomoc_wyp.TabIndex = 9;
+            this.pomoc_wyp.Text = "Pomoc";
+            this.pomoc_wyp.UseVisualStyleBackColor = true;
+            this.pomoc_wyp.Click += new System.EventHandler(this.helpmenu_Click);
+            // 
             // Wypozyczenia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -261,13 +276,13 @@ namespace Flota
             this.Controls.Add(this.dataOd);
             this.Controls.Add(this.textWypozyczajacy);
             this.Controls.Add(this.textPojazd);
-            this.Controls.Add(this.powrotMenu);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Wypozyczenia";
             this.Text = "Wypozyczenia";
             this.Load += new System.EventHandler(this.Wypozyczenia_Load);
+            this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -298,5 +313,6 @@ namespace Flota
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label zalogowany;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button pomoc_wyp;
     }
 }

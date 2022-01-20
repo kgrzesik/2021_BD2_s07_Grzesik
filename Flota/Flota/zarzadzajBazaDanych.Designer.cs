@@ -36,6 +36,7 @@ namespace Flota
             this.label10 = new System.Windows.Forms.Label();
             this.zalogowany = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.helpZarzBD = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -54,10 +55,10 @@ namespace Flota
             // 
             // powrotMenu
             // 
-            this.powrotMenu.Location = new System.Drawing.Point(50, 7);
+            this.powrotMenu.Location = new System.Drawing.Point(130, 7);
             this.powrotMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.powrotMenu.Name = "powrotMenu";
-            this.powrotMenu.Size = new System.Drawing.Size(175, 43);
+            this.powrotMenu.Size = new System.Drawing.Size(121, 43);
             this.powrotMenu.TabIndex = 1;
             this.powrotMenu.Text = "Powrót";
             this.powrotMenu.UseVisualStyleBackColor = true;
@@ -67,6 +68,7 @@ namespace Flota
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.helpZarzBD);
             this.panel2.Controls.Add(this.powrotMenu);
             this.panel2.Location = new System.Drawing.Point(448, 35);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -114,6 +116,17 @@ namespace Flota
             this.panel1.Size = new System.Drawing.Size(658, 265);
             this.panel1.TabIndex = 57;
             // 
+            // helpZarzBD
+            // 
+            this.helpZarzBD.Location = new System.Drawing.Point(14, 7);
+            this.helpZarzBD.Margin = new System.Windows.Forms.Padding(4);
+            this.helpZarzBD.Name = "helpZarzBD";
+            this.helpZarzBD.Size = new System.Drawing.Size(109, 43);
+            this.helpZarzBD.TabIndex = 9;
+            this.helpZarzBD.Text = "Pomoc";
+            this.helpZarzBD.UseVisualStyleBackColor = true;
+            this.helpZarzBD.Click += new System.EventHandler(this.helpZarzBD_Click);
+            // 
             // zarzadzajBazaDanych
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -144,5 +157,6 @@ namespace Flota
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label zalogowany;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button helpZarzBD;
     }
 }

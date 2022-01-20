@@ -37,6 +37,7 @@ namespace Flota
             this.label10 = new System.Windows.Forms.Label();
             this.zalogowany = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.helpZarzUzyt = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -44,7 +45,7 @@ namespace Flota
             // 
             // powrotMenu
             // 
-            this.powrotMenu.Location = new System.Drawing.Point(63, 10);
+            this.powrotMenu.Location = new System.Drawing.Point(122, 9);
             this.powrotMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.powrotMenu.Name = "powrotMenu";
             this.powrotMenu.Size = new System.Drawing.Size(138, 37);
@@ -79,6 +80,7 @@ namespace Flota
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.helpZarzUzyt);
             this.panel2.Controls.Add(this.powrotMenu);
             this.panel2.Location = new System.Drawing.Point(460, 49);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -127,6 +129,17 @@ namespace Flota
             this.panel1.Size = new System.Drawing.Size(658, 261);
             this.panel1.TabIndex = 59;
             // 
+            // helpZarzUzyt
+            // 
+            this.helpZarzUzyt.Location = new System.Drawing.Point(4, 9);
+            this.helpZarzUzyt.Margin = new System.Windows.Forms.Padding(4);
+            this.helpZarzUzyt.Name = "helpZarzUzyt";
+            this.helpZarzUzyt.Size = new System.Drawing.Size(111, 37);
+            this.helpZarzUzyt.TabIndex = 9;
+            this.helpZarzUzyt.Text = "Pomoc";
+            this.helpZarzUzyt.UseVisualStyleBackColor = true;
+            this.helpZarzUzyt.Click += new System.EventHandler(this.helpZarzUzyt_Click);
+            // 
             // zarzadajUzytkownikiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -158,5 +171,6 @@ namespace Flota
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label zalogowany;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button helpZarzUzyt;
     }
 }

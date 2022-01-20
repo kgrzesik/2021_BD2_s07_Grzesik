@@ -48,6 +48,7 @@ namespace Flota
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.helpmenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -127,7 +128,7 @@ namespace Flota
             // 
             // wyloguj
             // 
-            this.wyloguj.Location = new System.Drawing.Point(185, 10);
+            this.wyloguj.Location = new System.Drawing.Point(228, 10);
             this.wyloguj.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.wyloguj.Name = "wyloguj";
             this.wyloguj.Size = new System.Drawing.Size(96, 39);
@@ -138,8 +139,8 @@ namespace Flota
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(35, 10);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(118, 10);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 39);
             this.button1.TabIndex = 7;
@@ -253,12 +254,13 @@ namespace Flota
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.helpmenu);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.wyloguj);
-            this.panel2.Location = new System.Drawing.Point(438, 23);
+            this.panel2.Location = new System.Drawing.Point(430, 23);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(335, 58);
+            this.panel2.Size = new System.Drawing.Size(343, 58);
             this.panel2.TabIndex = 17;
             // 
             // panel3
@@ -273,6 +275,17 @@ namespace Flota
             this.panel3.Size = new System.Drawing.Size(294, 58);
             this.panel3.TabIndex = 18;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // helpmenu
+            // 
+            this.helpmenu.Location = new System.Drawing.Point(12, 10);
+            this.helpmenu.Margin = new System.Windows.Forms.Padding(4);
+            this.helpmenu.Name = "helpmenu";
+            this.helpmenu.Size = new System.Drawing.Size(103, 39);
+            this.helpmenu.TabIndex = 8;
+            this.helpmenu.Text = "Pomoc";
+            this.helpmenu.UseVisualStyleBackColor = true;
+            this.helpmenu.Click += new System.EventHandler(this.helpmenu_Click);
             // 
             // Menu
             // 
@@ -328,5 +341,6 @@ namespace Flota
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button helpmenu;
     }
 }
